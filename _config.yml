@@ -1,0 +1,75 @@
+title: 'SSRU CS Living Notes'
+author: >
+  <a href="mailto:info-elsci@ssru.ac.th">Info-eLearningscience</a> and
+  <a href="mailto:support-elsci@ssru.ac.th">Support-eLearningScience</a>,
+  Suan Sunandha Rajabhat University, Bangkok, Thailand
+copyright: '2023'
+logo: src/img/ssrupwicon.svg
+
+exclude_patterns:
+  - .github
+  - README.md
+  - .DS_Store
+  - __pycache__
+  - .ipynb_checkpoints
+
+html:
+  favicon: src/img/ssrupwicon.svg
+  use_edit_page_button: true
+  use_repository_button: true
+  use_issues_button: true
+  extra_footer: >
+    This <a href="https://jupyterbook.org/intro.html">Jupyter Book</a> article
+    is an exhibit accompanying the
+    <a href="https://openreview.net/forum?id=i4zpuNRiU4G">"You Only Write Thrice"</a>
+    paper published at
+    <a href="https://rethinkingmlpapers.github.io/">Rethinking ML Papers – ICLR 2021 Workshop</a>.
+    The source of this article is available on
+    <a href="https://github.com/ssrucs-phanulab-coursework/cslivingnotes">GitHub</a>.
+  extra_navbar: >
+    <a href="https://doi.org/10.5281/zenodo.5106062"><img src="https://zenodo.org/badge/DOI/10.5281/zenodo.5106062.svg" alt="DOI"></a>
+  google_analytics_id: G-DF8Y2BNFE0
+  home_page_in_navbar: true
+  baseurl: 'https://ssru-phanulab-coursework.github.io/cslivingnotes/'
+
+bibtex_bibfiles:
+  - src/csnotes.bib
+
+parse:
+  myst_enable_extensions:
+    - colon_fence
+    - dollarmath
+    - linkify
+
+repository:
+  url: https://github.com/ssrucs-phanulab-coursework/cslivingnotes
+
+execute:
+  execute_notebooks: cache
+  timeout: 30
+  allow_errors: false
+  stderr_output: show
+
+launch_buttons:
+  notebook_interface: 'classic'  # 'jupyterlab'
+  binderhub_url: 'https://mybinder.org'
+  colab_url: 'https://colab.research.google.com'
+  thebe: true
+
+sphinx:
+  local_extensions:
+    bibtex_iclr: _ext
+  config:
+    html_extra_path:
+      - README.md
+      - LICENCE
+      - .nojekyll
+    numfig_format:
+      figure: 'Figure %s'
+    numfig_secnum_depth: 0
+    bibtex_default_style: 'iclr'
+    # Configure Sphinx-copybutton
+    # <https://sphinx-copybutton.readthedocs.io/en/latest/>
+    copybutton_prompt_text: ''
+    copybutton_only_copy_prompt_lines: false
+    copybutton_remove_prompts: false

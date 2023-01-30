@@ -1,0 +1,20 @@
+format: jb-article
+defaults:
+  numbered: 1
+  maxdepth: 2
+root: src/csnotes
+sections:
+- file: src/text/source_multiplicity
+- file: src/text/publishing_workflow
+- file: src/text/conclusions
+- file: src/text/references
+  options:
+    numbered: false
+- file: src/text/appendix
+  options:
+    numbered: false
+- file: src/slides/yowt_slides
+  options:
+    numbered: false
+- url: https://github.com/so-cool/you-only-write-thrice/
+  title: Source (GitHub)
